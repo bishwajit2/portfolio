@@ -1,0 +1,21 @@
+$primary: #0FBF61;
+$default-color: #151D41;
+$primary-o-10: rgba(15, 191, 97, 0.1);
+$primary-o-95: rgba(15, 191, 97, 0.95);
+$box-shadow: 0 20px 22px 2px #7682B718;;
+
+$colors: (
+    "primary": $primary,
+    "default-color": $default-color,
+    "primary-0-10": $primary-o-10,
+    "primary-o-95": $primary-o-95,
+    "box-shadow": $box-shadow,
+);
+
+@mixin after {
+    position: absolute;
+    width: 292px;
+    height: 346px;
+    content: '';
+    z-index: -3333;
+}

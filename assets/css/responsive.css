@@ -16,7 +16,7 @@
 
 /* Medium Layout: 1280px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .nav li a {
+  .header .nav ul li a {
     padding: 5px 14px;
   }
   /* hero area responsive code herer */
@@ -47,7 +47,12 @@
   .open-menu-content {
     display: block;
   }
-  .nav {
+  .btn {
+    padding: 10px 40px;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  .header .nav {
     position: fixed;
     background: #f3f3f3;
     width: 250px;
@@ -61,33 +66,30 @@
     transition: all 0.3s ease;
     z-index: 999;
   }
-  .nav ul {
+  .header .nav ul {
     margin-bottom: 20px;
     width: 100%;
   }
-  .nav ul li {
+  .header .nav ul li {
     display: block;
     text-align: center;
     opacity: 0;
   }
-  .nav ul li a {
+  .header .nav ul li a {
     padding: 10px 15px;
   }
-  .btn.hire-me-btn {
+  .header .btn.hire-me-btn {
     opacity: 0;
+    background: var(--primary);
+    color: #fff;
   }
-  .nav.active {
+  .header .nav.active {
     right: 0;
   }
-  .btn {
-    padding: 10px 40px;
-    font-size: 1rem;
-    margin-top: 15px;
-  }
-  .close-btn {
+  .header .close-btn {
     display: block;
   }
-  .social-link {
+  .header .social-link {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -95,7 +97,7 @@
     width: 100%;
     text-align: center;
   }
-  .social-link a {
+  .header .social-link a {
     display: inline-block;
     padding: 10px 15px 10px 15px;
     border-radius: 50px 50px 0 0;

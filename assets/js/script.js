@@ -52,6 +52,7 @@
     })
 })();
 
+// Skill progress bar script
 (() => {
     
     let dataParcent = document.querySelectorAll(".skill-bar-inner");
@@ -66,7 +67,7 @@
     
 })();
 
-
+// Circular Progress Bar Script
 (() => {
     let circularProgress = document.querySelectorAll(".circular-progress");
     let circularProgressInner = document.querySelectorAll(".circular-progress-inner");
@@ -82,3 +83,9 @@
         circularValue[i].innerHTML = circularProgress[i].getAttribute("data-parcent") + "%";
     }
 })();
+
+// Sticky menu javascript
+ window.addEventListener('scroll', function() {
+     let header = document.querySelector('.header');
+     header.classList.toggle('sticky', window.scrollY > 0)
+ })

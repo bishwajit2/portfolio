@@ -793,6 +793,20 @@ img {
 /* Menu Design CSS */
 .header {
   padding: 15px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.header .brand {
+  width: 530px;
+  transition: all 0.3s ease;
+}
+
+.header .brand a {
+  display: block;
 }
 
 nav li {
@@ -803,7 +817,7 @@ nav li a {
   display: block;
   padding: 5px 25px;
   font-weight: 400;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav li a:hover {
@@ -908,7 +922,32 @@ nav .btn.hire-me-btn:hover {
   }
 }
 
+.header.sticky {
+  position: fixed;
+  background: #fff;
+  z-index: 9999999;
+  box-shadow: var(--box-shadow);
+  padding: 5px 0;
+}
+
+.header.sticky .brand {
+  width: 150px;
+}
+
+.header.sticky nav li a {
+  padding: 5px 18px;
+}
+
+.header.sticky .btn.hire-me-btn {
+  background-color: var(--primary);
+  color: #fff;
+}
+
 /* Hero Area */
+.hero-section {
+  padding-top: 100px;
+}
+
 .hero-section .title {
   font-size: 4rem;
   line-height: 1.4;
@@ -1064,7 +1103,7 @@ nav .btn.hire-me-btn:hover {
 }
 
 .circular .circular-progress .circular-progress-inner .inner-content {
-  z-index: 222;
+  z-index: 100;
   text-align: center;
 }
 

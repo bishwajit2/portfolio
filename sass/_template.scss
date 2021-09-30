@@ -27,6 +27,18 @@
 /* Menu Design CSS */ 
 .header {
 	padding: 15px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+    .brand {
+        width: 530px;
+        transition: all 0.3s ease;
+        a {
+            display: block;
+        }
+    }
 }
 
 nav {
@@ -39,7 +51,7 @@ nav {
             font: {
                 weight: 400;
             }
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
 
             &:hover {
                 color: var(--primary);
@@ -137,11 +149,35 @@ nav {
     }
 }
 
+.header.sticky {
+    position: fixed;
+    background: #fff;
+    z-index: 9999999;
+    box-shadow: var(--box-shadow);
+    padding: 5px 0;
+    .brand {
+        width: 150px;
+    }
+
+    nav {
+        li {
+            a {
+                padding: 5px 18px;
+            }
+        }
+    }
+
+    .btn.hire-me-btn {
+        background-color: var(--primary);
+        color: #fff;
+    }
+}
+
 
 /* Hero Area */
 
-
 .hero-section {
+    padding-top: 100px;
     .title {
         font-size: 4rem;
         line-height: 1.4;
@@ -303,7 +339,7 @@ nav {
             }
 
             .inner-content {
-                z-index: 222;
+                z-index: 100;
                 text-align: center;
                 .circular-value {
                     font-size: 59px;

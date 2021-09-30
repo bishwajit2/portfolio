@@ -7,6 +7,10 @@
   --box-shadow: 0 20px 22px 2px #7682B718;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::after,
 *::before {

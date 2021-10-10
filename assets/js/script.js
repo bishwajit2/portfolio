@@ -55,33 +55,58 @@
 // Skill progress bar script
 (() => {
     
-    let dataParcent = document.querySelectorAll(".skill-bar-inner");
-    let showParcent = document.querySelectorAll(".skill-box .show-parcent");
-    let dataLen = dataParcent.length;
-    let i;
-    for(i = 0; i < dataLen; i++) {
-        dataParcent[i].style.width = dataParcent[i].getAttribute("data-parcent") + '%';
-        showParcent[i].innerHTML = dataParcent[i].getAttribute("data-parcent") + '%';
-    }
-    
+    let skillboxes = document.querySelectorAll(".skill-box");
+    skillboxes.forEach(skillbox => {
+        let sillBarInner = skillbox.querySelector(".skill-bar-inner");
+        let showParcent = skillbox.querySelector(".show-parcent");
+        let width = 1;
+        let target = +sillBarInner.getAttribute("data-parcent");
+        let inc = target / 200;
+        let id = setInterval(frame, 5);
+        function frame() {
+            if(width >= target) {
+                clearInterval(id);
+            } else {
+                width += inc;
+                sillBarInner.style.width = width + "%";
+                showParcent.textContent = Math.floor(width) + "%";
+            }
+        }
+    })
     
 })();
 
 // Circular Progress Bar Script
 (() => {
-    let circularProgress = document.querySelectorAll(".circular-progress");
-    let circularProgressInner = document.querySelectorAll(".circular-progress-inner");
-    let circularValue = document.querySelectorAll(".circular-value");
-    let i;
-    let len = circularProgress.length;
+    // Select all circular boxes.
+    const circularProgress = document.querySelectorAll(".circular-progress");
 
-    for(i = 0; i < len; i++) {
-        circularProgressInner[i].style.background = `conic-gradient(
-            #0FBF61 ${circularProgress[i].getAttribute("data-parcent") * 3.6}deg,
-            #fff ${circularProgress[i].getAttribute("data-parcent") * 3.6}deg
-        )`;
-        circularValue[i].innerHTML = circularProgress[i].getAttribute("data-parcent") + "%";
-    }
+    // Use forEach iterator for applying animation to all the element. 
+    circularProgress.forEach(circular => {
+        // Select all necessary element of every circular boxes.
+        let circularProgressInner = circular.querySelector(".circular-progress-inner");
+        let circularValue = circular.querySelector(".circular-value");
+        let dataLength = 1;
+        let target = +circular.getAttribute("data-parcent");
+        let inc = target / 200;
+        let id = setInterval(frame, 5);
+        
+        function frame() {
+            if(dataLength >= target) {
+                clearInterval(id);
+            } else {
+                dataLength += inc;
+                // Iconic gradient background property.
+                circularProgressInner.style.background = `conic-gradient(
+                    #0FBF61 ${dataLength * 3.6}deg,
+                    #fff ${0 * 3.6}deg
+                )`;
+                circularValue.textContent = Math.floor(dataLength) + "%";
+            }
+        }
+    })
+
+
 })();
 
 // Sticky menu javascript

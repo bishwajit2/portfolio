@@ -1,0 +1,209 @@
+/* large Layout */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  h3 {
+    font-size: 25px;
+  }
+  .hero-section .title {
+    font-size: 3.5rem;
+  }
+  .author-img-wrap {
+    padding: 63px;
+  }
+  .single-features-box p {
+    margin-bottom: 40px;
+  }
+}
+
+/* Medium Layout: 1280px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nav li a {
+    padding: 5px 14px;
+  }
+  /* hero area responsive code herer */
+  .author-img-wrap {
+    padding: 16px;
+  }
+  .hero-section .title {
+    font-size: 3rem;
+  }
+}
+
+/* Medium Layout: 1280px */
+/* Tablet Layout: 768px */
+/* Tablet & Mobile Layout: 768px */
+@media only screen and (max-width: 991px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .section-padding {
+    padding: 80px 0;
+  }
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .open-menu-content {
+    display: block;
+  }
+  .nav {
+    position: fixed;
+    background: #f3f3f3;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    right: -250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  .nav ul {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .nav ul li {
+    display: block;
+    text-align: center;
+    opacity: 0;
+  }
+  .nav ul li a {
+    padding: 10px 15px;
+  }
+  .btn.hire-me-btn {
+    opacity: 0;
+  }
+  .nav.active {
+    right: 0;
+  }
+  .btn {
+    padding: 10px 40px;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  .close-btn {
+    display: block;
+  }
+  .social-link {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
+    width: 100%;
+    text-align: center;
+  }
+  .social-link a {
+    display: inline-block;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50px 50px 0 0;
+  }
+  /* Hero area responsive */
+  .hero-section .title {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-top: 15px;
+  }
+  .welcome-tikker {
+    font-size: 1rem;
+  }
+  .hero-links {
+    margin-top: 30px;
+  }
+  .author-img-wrap::after {
+    display: none;
+  }
+  .author-img {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    max-height: 200px;
+    border-color: var(--primary);
+  }
+  .author-img-wrap {
+    padding: 10px;
+    margin: 50px auto;
+  }
+  .order-sm-1 {
+    order: 1;
+  }
+  .order-sm-2 {
+    order: 2;
+  }
+  /* About Section  */
+  .about-section .title-tikker {
+    margin-top: 70px;
+  }
+  /* Features section*/
+  .single-features-box {
+    padding: 20px;
+  }
+  .skill-box .skill-content h4 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .skill-box .skill-content p {
+    font-size: 15px;
+  }
+  /* Testimonial Section*/
+  .testimonial-section::after {
+    display: none;
+  }
+  .single-testimonial {
+    padding: 20px;
+  }
+  .single-testimonial .testimonial-quote i.material-icons {
+    font-size: 80px;
+  }
+  .single-testimonial .testimonial-text p {
+    width: 100%;
+  }
+  /* Portfolio Section */
+  .single-work .hover-content-inner .hover-header {
+    margin-bottom: 0;
+  }
+  .single-work .hover-content-inner .hover-header h4 {
+    font-size: 18px;
+  }
+  .single-work .hover-content-inner .btn.portfolio-btn {
+    margin-top: 20px;
+  }
+  .single-work .hover-content-inner p {
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  /* Blog Section */
+  .blog-content h4 {
+    width: 100%;
+  }
+  /* Contact Section */
+  .contact-section input,
+  .contact-section select,
+  .contact-section textarea {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile Layout: 320px */
+@media only screen and (max-width: 767px) {
+  .open-button {
+    width: 20px;
+  }
+}
+
+/* Wide mobile Layout: 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .single-work .hover-content-inner .hover-header h4 {
+    font-size: 22px;
+  }
+  .single-work .hover-content-inner p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
